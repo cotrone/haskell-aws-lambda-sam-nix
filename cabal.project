@@ -1,0 +1,6 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: git@github.com:cotrone/aws-lambda-haskell-runtime.git
+  tag: sam-api-gateway

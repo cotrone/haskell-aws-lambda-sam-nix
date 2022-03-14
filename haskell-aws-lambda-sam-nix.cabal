@@ -1,0 +1,60 @@
+cabal-version:       2.4
+-- Initial package description 'haskell-aws-lambda-sam-nix.cabal' generated
+--  by 'cabal init'.  For further documentation, see
+-- http://haskell.org/cabal/users-guide/
+
+name:                haskell-aws-lambda-sam-nix
+version:             0.1.0.0
+-- synopsis:
+-- description:
+-- bug-reports:
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Kevin Cotrone
+maintainer:          kevincotrone@gmail.com
+-- copyright:
+-- category:
+extra-source-files:  CHANGELOG.md
+
+common deps
+  build-depends:       base ^>=4.14.3.0
+                     , aeson == 1.5.6.0
+                     , aws-lambda-haskell-runtime
+                     , http-types
+                     , lens
+                     , text
+
+executable haskell-aws-lambda-sam-nix
+  import: deps
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base ^>=4.14.3.0
+  cc-options: -static
+  ld-options: -static -pthread
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Widentities
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+    -Wpartial-fields
+    -Wtabs
+    -Wmissing-local-signatures
+    -fhelpful-errors
+    -fprint-expanded-synonyms
+    -fwarn-unused-do-bind
+    -Werror=incomplete-patterns
+    -O2
+    -static
+    -threaded
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+
+test-suite haskell-aws-lambda-sam-nix-test
+  default-language:    Haskell2010
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             MyLibTest.hs
+  build-depends:       base ^>=4.14.3.0

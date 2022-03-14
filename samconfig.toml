@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "haskell-aws-lambda-sam-nix"
+s3_bucket = "haskell-aws-lambda-sam-nix-deployments"
+s3_prefix = "haskell-aws-lambda-sam-nix"
+region = "us-west-1"
+capabilities = "CAPABILITY_IAM"
+
