@@ -8,7 +8,7 @@ version:             0.1.0.0
 -- synopsis:
 -- description:
 -- bug-reports:
-license:             BSD-3-Clause
+license:             MIT
 license-file:        LICENSE
 author:              Kevin Cotrone
 maintainer:          kevincotrone@gmail.com
